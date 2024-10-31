@@ -1,4 +1,5 @@
-FROM ubuntu:latest
-LABEL authors="monta"
-
-ENTRYPOINT ["top", "-b"]
+FROM openjdk:17-jdk-alpine
+EXPOSE 8082
+ADD target/timesheet-devops-1.0.jar timesheet-devops-1.0.jar
+ENTRYPOINT ["java",
+"-jar","/	DevOps_Project-1.0.jar"]
